@@ -17,7 +17,7 @@ function error = p_Zad3DMC(x, st)
     
 %     trajektoria zadana dla rozmytego
     yZad = zeros(iterNum, 1);
-    chunk = 120
+    chunk = 120;
     yZad(1:chunk)=-1*0.14;
     yZad(chunk + 1:2*chunk)=-1*0.08;
     yZad(2*chunk +1:3*chunk)=0.26;

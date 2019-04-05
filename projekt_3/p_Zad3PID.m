@@ -35,7 +35,7 @@ function error = p_Zad3PID(x)
 
 
     yZad = zeros(iterNum, 1);
-    chunk = 120
+    chunk = 120;
     yZad(1:chunk)=-1*0.14;
     yZad(chunk + 1:2*chunk)=-1*0.08;
     yZad(2*chunk +1:3*chunk)=0.26;
@@ -55,7 +55,7 @@ function error = p_Zad3PID(x)
     U = ones(iterNum, 1)*Upp;
     Y = ones(iterNum, 1)*Ypp;
 
-    for k = 12 : iterNum
+    for k = 7 : iterNum
         %SYMULACJA ALGORYTMU
         %pobranie wyjscia obiektu
         Y(k)=symulacja_obiektu3y(U(k-5), U(k-6), Y(k-1), Y(k-2));
