@@ -64,14 +64,14 @@ function error = p_Zad5DMCRozm(lreg, x, st)
 
     %przypisanie odpowiedzi skokowej (znormalizowanej=
        
-    M = cell(lreg,1);
-    Mp = cell(lreg,1);
+    %M = cell(lreg,1);
+    %Mp = cell(lreg,1);
     Ku = cell(lreg,1);
     ke = zeros(lreg,1);
 
     for v=1:lreg
         % Macierz M
-        M{v,1}=zeros(N,Nu);
+        M=zeros(N(v),Nu(v));
         for i=1:N
            for j=1:Nu
               if (i>=j)
@@ -81,7 +81,7 @@ function error = p_Zad5DMCRozm(lreg, x, st)
         end
 
         % Macierz Mp
-        Mp{v,1}=zeros(N,D-1);
+        Mp=zeros(N(v),D-1);
         for i=1:N
            for j=1:D-1
               if (i+j)<=D-1
@@ -93,8 +93,8 @@ function error = p_Zad5DMCRozm(lreg, x, st)
         end
 
         % Obliczanie parametrów regulatora
-        I=eye(Nu);
-        K=((M'*M+lambda*I)^(-1))*M';
+        I=eye(Nu(v));
+        K=((M'*M+lambda(v)*I)^(-1))*M';
         Ku{v,1}=K(1,:)*Mp;
         ke(v,1)=sum(K(1,:));
 
@@ -108,7 +108,7 @@ function error = p_Zad5DMCRozm(lreg, x, st)
 
         %ypast = y(k-1);
 
-        Y(k) = symulacja_obiektu3y(U(k-5),U(k-6),Y(k-1),Y(k-2));
+        Y(k) = symulacja_obiektu3y(Ukonc(k-5),Ukonc(k-6),Y(k-1),Y(k-2));
         y(k) = Y(k) - Ypp;
 
         e = yZad(k) - y(k);
@@ -121,11 +121,11 @@ function error = p_Zad5DMCRozm(lreg, x, st)
 %             uu = Ku*dUpast;
 %             du = ue-uu;
 
-            du(i) = ke(i)*e - Ku{i,1}*dUpast(i);
+            du(i) = ke(i)*e - Ku{i,1}*dUpast(i,:)';
             
             u(i,k) = upast(i)+du(i);
 
-            U(k) = u(k) + Upp;
+            U(i,k) = u(i,k) + Upp;
 
             if U(i,k) < Umin 
                  U(i,k) = Umin;
@@ -137,7 +137,7 @@ function error = p_Zad5DMCRozm(lreg, x, st)
 
             end
 
-            dUpast(i) = [du(i); dUpast(i,1:end-1)];
+            dUpast(i,:) = [du(i), dUpast(i,1:end-1)];
             
             %zaokraglenie Ukonc(k-1), aby odczytywac wartosci z funkcji
             %przynaleznosci
@@ -167,5 +167,5 @@ function error = p_Zad5DMCRozm(lreg, x, st)
     title(['Regulator DMC D=',sprintf('%g',D'),' N=',sprintf('%g',N),' Nu=',sprintf('%g',Nu),' lambda=',sprintf('%g',lambda)]);
     legend('y','yzad')
     subplot(2,1,2);
-    plot(U);
+    plot(Ukonc);
     end
