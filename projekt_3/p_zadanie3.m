@@ -31,8 +31,12 @@ if FUZZY == 0
     end
     
 else
-    %testowe argumenty
-    errorFPID = p_Zad5PIDRozm(3, [0.5 100 0; 0.2 40 0; 0.5 100 0]); 
+    if DMC == 0
+        %testowe argumenty
+        errorFPID = p_Zad5PIDRozm(3, [0.5 100 0; 0.2 40 0; 0.5 100 0]);
+    else
+        st = p_odpskokFDMC(3);
+        errorFDMC = p_Zad5DMCRozm(3, [53 53 1; 53 53 1; 53 53 1], st);
 end    
  
 % nazwa1 = sprintf('sprawko_dane/DMC_bez_zak/U__DMC_D=%g_N=%g_Nu=%g_L=%g_E=%g_.txt',D,N,Nu,lambda,wskaznikDMC);
