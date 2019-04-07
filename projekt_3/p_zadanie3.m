@@ -1,5 +1,5 @@
 clear all;
-DMC = 0;
+DMC = 1;
 FUZZY = 1;
 
 
@@ -37,6 +37,7 @@ else
     else
         st = p_odpskokFDMC(3);
         errorFDMC = p_Zad5DMCRozm(3, [53 53 1; 53 53 1; 53 53 1], st);
+    end
 end    
  
 % nazwa1 = sprintf('sprawko_dane/DMC_bez_zak/U__DMC_D=%g_N=%g_Nu=%g_L=%g_E=%g_.txt',D,N,Nu,lambda,wskaznikDMC);
