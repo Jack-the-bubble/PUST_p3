@@ -10,7 +10,7 @@ function st = p_odpskokFDMC(lreg)
     if lreg == 2
         uzad = [];
     elseif lreg == 3
-        uzad = [-0.5 -0.495; 0.2 0.205; 0.8 0.805];
+        uzad = [-0.5 -0.45; 0.2 0.25; 0.85 0.9];
     else
         disp("NIE");
         return;
@@ -29,11 +29,11 @@ function st = p_odpskokFDMC(lreg)
         st(i,:) = (y(chwila_skoku+1:end) - y(chwila_skoku-1)) ./ (uzad(i,2) - uzad(i,1));
     end
 
-%     figure(5)
-%     for es=1:lreg
-%         plot(st(es,:));
-%         hold on;
-%     end
-%     hold off;
+    figure(5)
+    for es=1:lreg
+        plot(st(es,:));
+        hold on;
+    end
+    hold off;
     
 end
