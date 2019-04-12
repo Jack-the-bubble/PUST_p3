@@ -1,13 +1,15 @@
 clear all;
-DMC = 1;
-FUZZY = 1;
+DMC = 0;
+FUZZY = 0;
 
 
 if FUZZY == 0
     if DMC == 0
-        errorPID = p_Zad3PID([0.5 100 0]);
+%          errorPID = p_Zad3PID([0.5 100 0]);
         %nastawy: [0.5 100 0] E=700,2026
-
+        xNaj = single_PIDfmincon([0.5 100 0]);
+        errorPID2 = p_Zad3PID(xNaj);
+        
     else
     %odp skokowa dla DMC na całej przestrzeni sterowania    
         czas_sym = 600;
@@ -27,6 +29,7 @@ if FUZZY == 0
     %     regulacja DMC
         errorDMC = p_Zad3DMC([53 53 1], st);
         %nastawy: [53 53 53 1] E=279,0880
+        
 
     end
     
