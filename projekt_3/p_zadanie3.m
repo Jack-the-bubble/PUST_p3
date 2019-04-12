@@ -42,7 +42,7 @@ else
     if DMC == 0
         %testowe argumenty
        % errorFPID = p_Zad5PIDRozm([0.5 100 0; 0.2 40 0; 0.5 100 0]);
-       xPID = fuzzy_PIDfmincon([0.5 100 0; 0.2 40 2; 0.5 100 2]);
+       xPID = fuzzy_PIDfmincon([10 200 0 20 100 0 5 500 40]);
        errorPID2 = p_Zad3PID(xPID);
         
     else
