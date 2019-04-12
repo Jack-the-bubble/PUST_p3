@@ -2,7 +2,9 @@
 %Zadanie 6
 %Funkcja obliczaj�ca b��d DMC
 
-function error = p_Zad3DMC(x, st)
+function error = p_Zad3DMC(x)
+    global st;
+
     clear e u y U Y
 
     %dane
