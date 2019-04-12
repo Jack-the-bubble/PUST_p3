@@ -2,11 +2,13 @@
 %Zadanie 6
 %Funkcja obliczaj�ca b��d PID
 
-function error = p_Zad5PIDRozm(lreg, x)
+function error = p_Zad5PIDRozm(x)
     %nastawy i czas probkowania (TODO: pomy�le� o sekcjonowaniu kodu)
     %Ti = 24;
     %Td = 3;
     %K = 0.7;
+    
+    global lreg;
     
     K = zeros(lreg,1);
     Ti = zeros(lreg,1);

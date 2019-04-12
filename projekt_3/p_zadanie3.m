@@ -1,8 +1,11 @@
 clear all;
-DMC = 1;
-FUZZY = 0;
+DMC = 0;
+FUZZY = 1;
 
 global st;
+global lreg;
+
+lreg = 3;
 
 if FUZZY == 0
     if DMC == 0
@@ -38,7 +41,10 @@ if FUZZY == 0
 else
     if DMC == 0
         %testowe argumenty
-        errorFPID = p_Zad5PIDRozm(3, [0.5 100 0; 0.2 40 0; 0.5 100 0]);
+       % errorFPID = p_Zad5PIDRozm([0.5 100 0; 0.2 40 0; 0.5 100 0]);
+       xPID = fuzzy_PIDfmincon([0.5 100 0; 0.2 40 2; 0.5 100 2]);
+       errorPID2 = p_Zad3PID(xPID);
+        
     else
         st = p_odpskokFDMC(3);
         errorFDMC = p_Zad5DMCRozm(3, [53 53 1; 53 53 1; 53 53 1], st);
