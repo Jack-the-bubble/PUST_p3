@@ -20,9 +20,16 @@ function error = p_Zad5PIDRozm(x)
     %nastawy
     T = 0.5;
     for i=1:lreg
-        K(i) = x(i,1);
-        Ti(i) = x(i,2);
-        Td(i) = x(i,3);
+        K(i) = x(3*(i-1)+1);
+        Ti(i) = x(3*(i-1)+2);
+        Td(i) = x(3*(i-1)+3);
+%         K(i) = x(1);
+%         Ti(i) = x(2);
+%         Td(i) = x(3);
+
+%         K(i) = x(i,1);
+%         Ti(i) = x(i,2);
+%         Td(i) = x(i,3);
         r0(i) = K(i)*(1+T/(2*Ti(i))+Td(i)/T);
         r1(i) = K(i)*(T/(2*Ti(i))-2*Td(i)/T-1);
         r2(i) = K(i)*Td(i)/T;        
