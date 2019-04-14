@@ -125,9 +125,9 @@ else
     %trapezowe funkcje przynaleznosci
     mf = zeros(3,10001);
     ux = 0:0.01:100;
-    mf(1,:) = trapmf(ux,[-1 -1 -0.2 0]);
-    mf(2,:) = trapmf(ux,[-0.2 0 0.4 0.6]);
-    mf(3,:) = trapmf(ux,[0.4 0.6 1 1]);
+    %mf(1,:) = trapmf(ux,[-1 -1 -0.2 0]);
+    %mf(2,:) = trapmf(ux,[-0.2 0 0.4 0.6]);
+    %mf(3,:) = trapmf(ux,[0.4 0.6 1 1]);
     
     % Do zestawienia funkcji przynaleznosci z charakterystyka statyczna
 %     figure(2)
@@ -172,12 +172,25 @@ else
             
             %zaokraglenie Ukonc(k-1), aby odczytywac wartosci z funkcji
             %przynaleznosci
-            Ukonc(k-1) = round(Ukonc(k-1),2);
-            
+            %Ukonc(k-1) = round(Ukonc(k-1),2);
             %mnozenie przez funkcje przynaleznosci
             %20*Ukonc(k-1)+1 to przerobienie wartosci sterowania na
             %indeksy w macierzy funkcji przynaleznosci
-            Ukonc(k) = Ukonc(k) + U(j,k)*mf(j,100*Ukonc(k-1)+1);
+            %Ukonc(k) = Ukonc(k) + U(j,k)*mf(j,100*Ukonc(k-1)+1);
+            
+            if i == j
+                value = trapmf(Ukonc(k-1),[0 0 40 45]);
+            end
+            
+            if i == j
+                value = trapmf(Ukonc(k-1),[40 45 55 60]);
+            end
+            
+            if i == j
+                value = trapmf(Ukonc(k-1),[55 60 100 100]);
+            end
+            
+            Ukonc(k) = Ukonc(k) + U(j,k)*value;
             
         end
         
