@@ -101,15 +101,15 @@ function error = p_Zad5PIDRozm(x)
             %w = trapezoid(j,Ukonc(k-1));
             
             if j == 1
-                value = trapmf(U(k-1),[-1 -1 -0.2 0]);
+                value = trapmf(Ukonc(k-1),[-1 -1 -0.2 0]);
             end
     
             if j == 2
-                value = trapmf(U(k-1),[-0.2 0 0.4 0.6]);
+                value = trapmf(Ukonc(k-1),[-0.2 0 0.4 0.6]);
             end
     
             if j == 3
-                value = trapmf(U(k-1),[0.4 0.6 1 1]);
+                value = trapmf(Ukonc(k-1),[0.4 0.6 1 1]);
             end
             
             Ukonc(k) = Ukonc(k) + U(j,k)*value;
