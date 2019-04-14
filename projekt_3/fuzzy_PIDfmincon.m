@@ -1,4 +1,4 @@
-%% PID rozmyty
+% PID rozmyty
 
 %ograniczenia nastaw PID
     function xPID = fuzzy_PIDfmincon(x0PID)
@@ -9,10 +9,10 @@
     Kmax = 10;
 
     Timin = 0.1;
-    Timax = 1000000;
+    Timax = 1000;
 
     Tdmin = 0;
-    Tdmax = 10000;
+    Tdmax = 1000;
 
     %funkcja celu (PID) -> Zad6PID (na razie)
 
@@ -38,15 +38,15 @@
 %      x0PID = [1; 30; 5];
 
     %dodatkowe opcje
-    %optionsPID = optimoptions(@fmincon, 'Algorithm', 'sqp', 'Display', 'iter');
+    optionsPID = optimoptions(@fmincon, 'Algorithm', 'sqp', 'Display', 'notify');
     
     %dodatkowe opcje
     %optionsPID = optimoptions(@ga, 'Display', 'iter', 'MaxGenerations', 30);
-    optionsPID = optimoptions(@ga, 'Display', 'none', 'MaxGenerations', 10);
+    %optionsPID = optimoptions(@ga, 'Display', 'none', 'MaxGenerations', 10);
     
     %x = [x(1) x(2) x(3)] = [K Ti Td]
-    %xPID = fmincon(@p_Zad5PIDRozm, x0PID, APID, bPID, [], [], [], [], [], optionsPID);
-    xPID = ga(@p_Zad5PIDRozm, 9, APID, bPID, [], [], [], [], [], optionsPID);
+    xPID = fmincon(@p_Zad5PIDRozm, x0PID, APID, bPID, [], [], [], [], [], optionsPID);
+    %xPID = ga(@p_Zad5PIDRozm, 9, APID, bPID, [], [], [], [], [], optionsPID);
 end
 
 

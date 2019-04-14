@@ -1,4 +1,4 @@
-%% PID rozmyty
+% PID rozmyty
 
 %ograniczenia nastaw PID
     function xPID = fuzzy_PIDfmincon2(x0PID)

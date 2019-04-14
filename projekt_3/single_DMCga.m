@@ -1,4 +1,4 @@
-%% DMC
+% DMC
 function xDMC = single_DMCga()
     %ograniczenia parametr�w DMC
     %Nmax = D;

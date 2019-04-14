@@ -41,9 +41,10 @@ if FUZZY == 0
 else
     if DMC == 0
         %testowe argumenty
-       % errorFPID = p_Zad5PIDRozm([0.5 100 0; 0.2 40 0; 0.5 100 0]);
-       xPID = fuzzy_PIDfmincon([10 200 0 20 100 0 5 500 40]);
-       errorPID2 = p_Zad3PID(xPID);
+       %errorFPID = p_Zad5PIDRozm([0.5 100 0 0.2 40 0 0.5 100 0]);
+       errorFPID1 = p_Zad5PIDRozm([2.0446 81.7351 0.0268 0.1818 13.9448 1.4925 4.0664 101.5976 1.1660]);%najlepsze
+       %xPID = fuzzy_PIDfmincon([0.5 100 0 0.2 40 0 0.5 100 0]);
+       %errorPID2 = p_Zad3PID(xPID);
         
     else
         st = p_odpskokFDMC(3);

@@ -1,4 +1,4 @@
-%% PID nierozmyty
+% PID nierozmyty
 
 %ograniczenia nastaw PID
     function xPID = single_PIDfmincon(x0PID)

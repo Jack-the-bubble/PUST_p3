@@ -45,11 +45,11 @@ function error = p_Zad5PIDRozm(x)
     yZad(5*chunk +1 :iterNum)=5.594;
     
     %trapezowe funkcje przynaleznosci
-    mf = zeros(lreg,2001);
-    ux = -1:0.001:1;
-    mf(1,:) = trapmf(ux,[-1 -1 -0.2 0]);
-    mf(2,:) = trapmf(ux,[-0.2 0 0.4 0.6]);
-    mf(3,:) = trapmf(ux,[0.4 0.6 1 1]);
+%     mf = zeros(lreg,2001);
+%     ux = -1:0.001:1;
+%     mf(1,:) = trapmf(ux,[-1 -1 -0.2 0]);
+%     mf(2,:) = trapmf(ux,[-0.2 0 0.4 0.6]);
+%     mf(3,:) = trapmf(ux,[0.4 0.6 1 1]);
     
     % Do zestawienia funkcji przynaleznosci z charakterystyka statyczna
 %     figure(2)
@@ -92,13 +92,27 @@ function error = p_Zad5PIDRozm(x)
             
             %zaokraglenie Ukonc(k-1), aby odczytywac wartosci z funkcji
             %przynaleznosci
-            Ukonc(k-1) = round(Ukonc(k-1),3);
+            %Ukonc(k-1) = round(Ukonc(k-1),3);
             
             %mnozenie przez funkcje przynaleznosci
             %1000*Ukonc(k-1)+1001 to przerobienie wartosci sterowania na
             %indeksy w macierzy funkcji przynaleznosci
-            Ukonc(k) = Ukonc(k) + U(j,k)*mf(j,1000*Ukonc(k-1)+1001);
+            %Ukonc(k) = Ukonc(k) + U(j,k)*mf(j,1000*Ukonc(k-1)+1001);
+            %w = trapezoid(j,Ukonc(k-1));
             
+            if j == 1
+                value = trapmf(U(k-1),[-1 -1 -0.2 0]);
+            end
+    
+            if j == 2
+                value = trapmf(U(k-1),[-0.2 0 0.4 0.6]);
+            end
+    
+            if j == 3
+                value = trapmf(U(k-1),[0.4 0.6 1 1]);
+            end
+            
+            Ukonc(k) = Ukonc(k) + U(j,k)*value;
         end
 
     end
@@ -106,8 +120,8 @@ function error = p_Zad5PIDRozm(x)
     Ypid = Y;
     Upid = U;
 
-    error = sum(((yZad+Ypp) - Ypid).^2);
-    disp('Wskaznik jakosci regulacji dla regulatora PID: '+ error);
+     error = sum(((yZad+Ypp) - Ypid).^2);
+     disp('Wskaznik jakosci regulacji dla regulatora PID: '+ error);
     
     figure(1)
     subplot(2,1,1);
@@ -115,8 +129,22 @@ function error = p_Zad5PIDRozm(x)
     hold on;
     plot(yZad+Ypp);
     hold off;
-    title(['Regulator PID K=',sprintf('%g',K'),' Ti=',sprintf('%g',Ti),' Td=',sprintf('%g',Td)]);
     legend('y','yzad')
     subplot(2,1,2);
     plot(Ukonc);
+end
+
+
+function value = trapezoid(reg, u)
+    if reg == 1
+        value = trapmf(u,[-1 -1 -0.2 0])
+    end
+    
+    if reg == 2
+        value = trapmf(u,[-0.2 0 0.4 0.6])
+    end
+    
+    if reg == 3
+        value = trapmf(u,[0.4 0.6 1 1])
+    end
 end
