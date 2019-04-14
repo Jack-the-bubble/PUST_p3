@@ -1,8 +1,7 @@
 clear all;
 global st;
 global lreg;
-global D;
-D = 61;
+
 
 DMC = 1;
 FUZZY = 1;

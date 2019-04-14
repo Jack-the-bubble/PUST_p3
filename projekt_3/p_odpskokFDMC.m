@@ -1,6 +1,6 @@
-function st = p_odpskokFDMC(lreg)
+function st = p_odpskokFDMC()
 %odp skokowe dla DMC na poszczegolnych kawalkach sterowania
-    
+    global lreg;
     czas_sym = 600;
     chwila_skoku = 400;
     st = zeros(lreg,czas_sym-chwila_skoku);
@@ -8,7 +8,7 @@ function st = p_odpskokFDMC(lreg)
     
     
     if lreg == 2
-        uzad = [];
+        uzad = [-0.5 -0.45; 0.85 0.9];;
     elseif lreg == 3
         uzad = [-0.5 -0.45; 0.2 0.25; 0.85 0.9];
     else

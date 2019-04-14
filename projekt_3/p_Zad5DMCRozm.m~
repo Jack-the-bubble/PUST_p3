@@ -4,7 +4,7 @@
 
 function error = p_Zad5DMCRozm(x)
     clear e u y U Y
-    global lreg st D;
+    global lreg st;
     %dane
     iterNum = 1000;
     Umin = -1;
@@ -25,6 +25,11 @@ function error = p_Zad5DMCRozm(x)
     clear U Y
 
     %REGULATOR DMC -----------------------------------------------------
+    %horyzonty
+    D = 53;
+    %N = 35;
+    %Nu = 2;
+    %lambda = 21;
     
     N = zeros(lreg,1);
     Nu = zeros(lreg,1);
@@ -146,18 +151,18 @@ function error = p_Zad5DMCRozm(x)
                 end
             end
             
-            if lreg == 3
-                if i == 1
-                    value = trapmf(Ukonc(k-1),[-1 -1 -0.2 0]);
-                end
-                
-                if i == 2
-                    value = trapmf(Ukonc(k-1),[-0.2 0 0.4 0.6]);
-                end
-                
-                if i == 3
-                    value = trapmf(Ukonc(k-1),[0.4 0.6 1 1]);
-                end
+            if lreg = 3
+            if i == 1
+                value = trapmf(Ukonc(k-1),[-1 -1 -0.2 0]);
+            end
+    
+            if i == 2
+                value = trapmf(Ukonc(k-1),[-0.2 0 0.4 0.6]);
+            end
+    
+            if i == 3
+                value = trapmf(Ukonc(k-1),[0.4 0.6 1 1]);
+            end
             end
             
 

@@ -99,17 +99,28 @@ function error = p_Zad5PIDRozm(x)
             %indeksy w macierzy funkcji przynaleznosci
             %Ukonc(k) = Ukonc(k) + U(j,k)*mf(j,1000*Ukonc(k-1)+1001);
             %w = trapezoid(j,Ukonc(k-1));
+            if lreg == 3
+                if j == 1
+                    value = trapmf(Ukonc(k-1),[-1 -1 -0.2 0]);
+                end
+                
+                if j == 2
+                    value = trapmf(Ukonc(k-1),[-0.2 0 0.4 0.6]);
+                end
+                
+                if j == 3
+                    value = trapmf(Ukonc(k-1),[0.4 0.6 1 1]);
+                end
+            end
             
-            if j == 1
-                value = trapmf(Ukonc(k-1),[-1 -1 -0.2 0]);
-            end
-    
-            if j == 2
-                value = trapmf(Ukonc(k-1),[-0.2 0 0.4 0.6]);
-            end
-    
-            if j == 3
-                value = trapmf(Ukonc(k-1),[0.4 0.6 1 1]);
+            if lreg == 2
+                if j == 1
+                    value = trapmf(Ukonc(k-1),[-1 -1 0 0.6]);
+                end
+                
+                if j == 2
+                    value = trapmf(Ukonc(k-1),[0 0.6 1 1]);
+                end
             end
             
             Ukonc(k) = Ukonc(k) + U(j,k)*value;

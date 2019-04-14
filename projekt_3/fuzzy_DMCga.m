@@ -1,23 +1,22 @@
-% PID rozmyty
+% DMC rozmyty
 
 %ograniczenia nastaw PID
     function xDMC = fuzzy_DMCga()
     global lreg;
     
-    %x0PID - punkt startowy
-    Nmin = 1;
+    %ograniczenia parametr�w DMC
+    %Nmax = D;
     Nmax = 53;
+    Nmin = 1;
 
+    %Numax = D;
     Numin = 1;
-    Numax = 53;
 
-    lambdamin = 0.01;
     lambdamax = 1000;
-
-    %funkcja celu (PID) -> Zad6PID (na razie)
+    lambdamin = 0.1;
 
     %ograniczenia nierownosciowe
-    ADMC_part = [1 0 0; 0 1 0; 0 0 1; -1 0 0; 0 -1 0; 0 0 -1];
+    ADMC_part = [1 0 0; -1 1 0; 0 0 1; -1 0 0; 0 -1 0; 0 0 -1];
     ADMC_zeros = zeros(6,3);
         
     ADMC = [ADMC_part ADMC_zeros ADMC_zeros];
