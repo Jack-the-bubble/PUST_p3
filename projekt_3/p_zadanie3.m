@@ -1,5 +1,5 @@
 clear all;
-DMC = 0;
+DMC = 1;
 FUZZY = 1;
 
 global st;
@@ -48,7 +48,9 @@ else
         
     else
         st = p_odpskokFDMC(3);
-        errorFDMC = p_Zad5DMCRozm(3, [53 53 1; 53 53 1; 53 53 1], st);
+        xDMC = fuzzy_DMCga();
+
+        %errorFDMC = p_Zad5DMCRozm([53 53 10 53 53 10 53 53 10]);
     end
 end    
  

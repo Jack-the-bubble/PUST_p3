@@ -2,9 +2,9 @@
 %Zadanie 6
 %Funkcja obliczaj�ca b��d DMC
 
-function error = p_Zad5DMCRozm(lreg, x, st)
+function error = p_Zad5DMCRozm(x)
     clear e u y U Y
-
+    global lreg st;
     %dane
     iterNum = 1000;
     Umin = -1;
@@ -22,13 +22,6 @@ function error = p_Zad5DMCRozm(lreg, x, st)
     yZad(4*chunk+1:5*chunk)=3.576;
     yZad(5*chunk +1 :iterNum)=5.594;
     
-    %trapezowe funkcje przynaleznosci
-    mf = zeros(lreg,2001);
-    ux = -1:0.001:1;
-    mf(1,:) = trapmf(ux,[-1 -1 -0.2 0]); %-0.5
-    mf(2,:) = trapmf(ux,[-0.2 0 0.4 0.6]); %0.2
-    mf(3,:) = trapmf(ux,[0.4 0.6 1 1]); %0.7
-    
     clear U Y
 
     %REGULATOR DMC -----------------------------------------------------
@@ -43,9 +36,9 @@ function error = p_Zad5DMCRozm(lreg, x, st)
     lambda = zeros(lreg,1);
     
     for i=1:lreg
-        N(i) = x(i,1);
-        Nu(i) = x(i,2);
-        lambda(i) = x(i,3);
+        N(i) = x(3*(i-1)+1);
+        Nu(i) = x(3*(i-1)+2);
+        lambda(i) = x(3*(i-1)+3);
     end
 
     %PARAMETRY 
@@ -141,12 +134,26 @@ function error = p_Zad5DMCRozm(lreg, x, st)
             
             %zaokraglenie Ukonc(k-1), aby odczytywac wartosci z funkcji
             %przynaleznosci
-            Ukonc(k-1) = round(Ukonc(k-1),3);
+            %Ukonc(k-1) = round(Ukonc(k-1),3);
             
             %mnozenie przez funkcje przynaleznosci
             %1000*Ukonc(k-1)+1001 to przerobienie wartosci sterowania na
             %indeksy w macierzy funkcji przynaleznosci
-            Ukonc(k) = Ukonc(k) + U(i,k)*mf(i,1000*Ukonc(k-1)+1001);
+            %Ukonc(k) = Ukonc(k) + U(i,k)*mf(i,1000*Ukonc(k-1)+1001);
+            
+            if i == 1
+                value = trapmf(Ukonc(k-1),[-1 -1 -0.2 0]);
+            end
+    
+            if i == 2
+                value = trapmf(Ukonc(k-1),[-0.2 0 0.4 0.6]);
+            end
+    
+            if i == 3
+                value = trapmf(Ukonc(k-1),[0.4 0.6 1 1]);
+            end
+            
+            Ukonc(k) = Ukonc(k) + U(i,k)*value;
         end
     end
     

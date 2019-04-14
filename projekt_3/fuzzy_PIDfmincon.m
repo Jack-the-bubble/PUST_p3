@@ -5,10 +5,10 @@
     global lreg;
     
     %x0PID - punkt startowy
-    Kmin = 0.1;
+    Kmin = 0;
     Kmax = 10;
 
-    Timin = 0.1;
+    Timin = 0;
     Timax = 1000;
 
     Tdmin = 0;
