@@ -1,0 +1,3 @@
+pdf/PID_K=0_2_Ti=4_0126_Td=2_0669_E=104_018_.pdf: ../wykresy_txt/PID_single/Y__PID_K=0.2_Ti=4.0126_Td=2.0669_E=104.018_.txt
+pdf/PID_K=0_2_Ti=4_0126_Td=2_0669_E=104_018_.pdf: ../wykresy_txt/PID_single/Yzad_single.txt
+pdf/PID_K=0_2_Ti=4_0126_Td=2_0669_E=104_018_.pdf: ../wykresy_txt/PID_single/U__PID_K=0.2_Ti=4.0126_Td=2.0669_E=104.018_.txt

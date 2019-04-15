@@ -1,0 +1,3 @@
+pdf/DMC_D=53_N=46_Nu=1_L=119_543_E=113_614_.pdf: ../wykresy_txt/DMC_single/Y__DMC_D=53_N=46_Nu=1_L=119.543_E=113.614_.txt
+pdf/DMC_D=53_N=46_Nu=1_L=119_543_E=113_614_.pdf: ../wykresy_txt/DMC_single/Yzad_single.txt
+pdf/DMC_D=53_N=46_Nu=1_L=119_543_E=113_614_.pdf: ../wykresy_txt/DMC_single/U__DMC_D=53_N=46_Nu=1_L=119.543_E=113.614_.txt

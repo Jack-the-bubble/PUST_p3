@@ -1,0 +1,137 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\sisetup{detect-weight,exponent-product=\cdot,output-decimal-marker={,},
+	per-mode=symbol,binary-units=true,range-phrase={-},range-units=single}
+\SendSettingsToPgf
+\usetikzlibrary{pgfplots.groupplots}
+\pgfplotsset{compat=1.10}
+\usepgfplotslibrary{external}
+\tikzexternalize
+
+\textwidth 160mm \textheight 247mm
+
+\pgfplotsset{width=\figurewidth,compat=1.10}
+\pgfplotsset{width=\figurewidth}
+\pgfplotsset{
+	tick label style={font=\tiny},
+	label style={font=\footnotesize},
+	legend style={font=\footnotesize},
+	title style={font=\footnotesize},
+}
+
+
+\newcommand{\szer}{16cm}
+\newcommand{\wys}{5.6cm}
+\newcommand{\size}{9cm}
+\newcommand{\odstepionowy}{1.2cm}
+
+\definecolor{kolor4}{rgb}{0,0,0.1724}
+\definecolor{kolor5}{rgb}{1.0000,0.1034,0.7241}
+\definecolor{kolor6}{rgb}{1.0000,0.8276,0}
+
+\begin{document}
+	
+	
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/punkt_pracy}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\size,height=\size]
+	\nextgroupplot
+	[xmin=-1, xmax=1,
+	xlabel=$U$,ylabel=$Y(U)$,legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../wykresy_txt/char_stat.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+		
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+\centering
+\tikzsetnextfilename{pdf/PID_K=0_2_Ti=4_0126_Td=2_0669_E=104_018_}
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+width=\szer,height=\wys]
+\nextgroupplot
+[xmin=0, xmax=800,
+xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+\addplot[const plot,color=blue,semithick] file {../wykresy_txt/PID_single/Y__PID_K=0.2_Ti=4.0126_Td=2.0669_E=104.018_.txt};
+\addplot[const plot, color=red,semithick,densely dashed] file {../wykresy_txt/PID_single/Yzad_single.txt};
+\legend{$y$,$y^{\mathrm{zad}}$}
+\nextgroupplot
+[xmin=0,xmax=800, xlabel=$k$,ylabel=$u$]
+\addplot[const plot, color=blue,semithick]
+file {../wykresy_txt/PID_single/U__PID_K=0.2_Ti=4.0126_Td=2.0669_E=104.018_.txt};
+\end{groupplot}
+\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/DMC_D=53_N=46_Nu=1_L=119_543_E=113_614_}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=800,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {../wykresy_txt/DMC_single/Y__DMC_D=53_N=46_Nu=1_L=119.543_E=113.614_.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../wykresy_txt/DMC_single/Yzad_single.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=800, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../wykresy_txt/DMC_single/U__DMC_D=53_N=46_Nu=1_L=119.543_E=113.614_.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/PID_K=0_4488__0_0892_Ti=122_096__3_3326_Td=1_19__0_4033_E=93_5944_}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=800,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {../wykresy_txt/PID_fuzzy/Y__PID_K=0.4488,0.0892_Ti=122.096,3.3326_Td=1.19,0.4033_E=93.5944_.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../wykresy_txt/PID_fuzzy/Yzad_single.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=800, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../wykresy_txt/PID_fuzzy/U__PID_K=0.4488,0.0892_Ti=122.096,3.3326_Td=1.19,0.4033_E=93.5944_.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/PID_K=1_9083__0_3995__1_4088_Ti=93_9994__31_5524__77_658_Td=0_7405__0_0462__0_1715_E=361_711_}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=800,
+	xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=south east,]
+	\addplot[const plot,color=blue,semithick] file {../wykresy_txt/PID_fuzzy/Y__PID_K=1.9083,0.3995,1.4088_Ti=93.9994,31.5524,77.658_Td=0.7405,0.0462,0.1715_E=361.711_.txt};
+	\addplot[const plot, color=red,semithick,densely dashed] file {../wykresy_txt/PID_fuzzy/Yzad_single.txt};
+	\legend{$y$,$y^{\mathrm{zad}}$}
+	\nextgroupplot
+	[xmin=0,xmax=800, xlabel=$k$,ylabel=$u$]
+	\addplot[const plot, color=blue,semithick]
+	file {../wykresy_txt/PID_fuzzy/U__PID_K=1.9083,0.3995,1.4088_Ti=93.9994,31.5524,77.658_Td=0.7405,0.0462,0.1715_E=361.711_.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+
+\end{document}
