@@ -8,7 +8,7 @@ function error = p_Zad3DMC(x)
     clear e u y U Y
 
     %dane
-    iterNum = 1000;
+    iterNum = 800;
     Umin = -1;
     Umax = 1;
     Ypp = 0;
@@ -165,27 +165,23 @@ title(['Regulator DMC D=',sprintf('%g',D'),' N=',sprintf('%g',N),' Nu=',sprintf(
 legend('y','yzad')
 subplot(2,1,2);
 plot(U);
+
+ nazwa1 = sprintf('wykresy_txt/DMC_single/U__DMC_D=%g_N=%g_Nu=%g_L=%g_E=%g_.txt',D,N,Nu,lambda,error);
+ nazwa2 = sprintf('wykresy_txt/DMC_single/Y__DMC_D=%g_N=%g_Nu=%g_L=%g_E=%g_.txt',D,N,Nu,lambda,error);
+ nazwa3 = 'wykresy_txt/DMC_single/Yzad_single.txt';
+
+file = fopen(nazwa1, 'w');
+A = [(1:iterNum);U'];
+fprintf(file, '%4.3f %.3f \n',A);
+fclose(file);
+
+file = fopen(nazwa2, 'w');
+B = [(1:iterNum);Y'];
+fprintf(file, '%4.3f %.3f \n',B);
+fclose(file);
+
+file = fopen(nazwa3, 'w');
+C = [(1:iterNum);(yZad+Ypp)'];
+fprintf(file, '%4.3f %.3f \n',C);
+fclose(file);
 end
-
-    
-
-
-
-% %figure(1)
-% %plot(U); hold on; plot(Y); hold off;hold on; plot(yZad+Ypp); hold off;    
-% figure(2)   
-% subplot(2,1,1);
-% plot(Y);
-% hold on;
-% plot(yZad+Ypp);
-% hold off;
-% title(['Regulator DMC D=',sprintf('%g',D'),' N=',sprintf('%g',N),' Nu=',sprintf('%g',Nu),' lambda=',sprintf('%g',lambda)]);
-% legend('y','yzad')
-% subplot(2,1,2);
-% plot(U);
-
-%-----DO ZAPISYWANIA DO PLIKU-----------
-%-----GENEROWANIE Ku--------------------
-%  file = fopen('Ku.txt', 'w');
-%  fprintf(file, '%.6f, \n', Ku');
-%  fclose(file);

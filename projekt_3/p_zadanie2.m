@@ -16,28 +16,23 @@ for i = 1:21
     ylabel('y(k)');
     hold on;
 end
+% matlab2tikz('wykresy_tikz/odpowiedzi_skok.tex', 'showInfo', false);
 hold off;
 
-ux = -1:0.1:1;
 
+
+ux = -1:0.1:1;
 figure(2);
 plot(ux,y(czas_sym, :));
 
-% nazwa1 = sprintf('sprawko_dane/DMC_bez_zak/U__DMC_D=%g_N=%g_Nu=%g_L=%g_E=%g_.txt',D,N,Nu,lambda,wskaznikDMC);
-%     nazwa2 = sprintf('sprawko_dane/DMC_bez_zak/Y__DMC_D=%g_N=%g_Nu=%g_L=%g_E=%g_.txt',D,N,Nu,lambda,wskaznikDMC);
-%     nazwa3 = 'sprawko_dane/DMC_bez_zak/Yzad.txt';
-
+% nazwa1 = sprintf('wykresy_txt/char_stat_Y.txt');
 % file = fopen(nazwa1, 'w');
-% A = [(1:czas_sym);u'];
-% fprintf(file, '%4.3f %.3f \n',A);
-% fclose(file);
-% 
-% file = fopen(nazwa2, 'w');
-% B = [(1:czas_sym);y'];
+% B = [(1:21);y(czas_sym,:)];
 % fprintf(file, '%4.3f %.3f \n',B);
 % fclose(file);
 % 
-% file = fopen(nazwa3, 'w');
-% C = [(1:czas_sym);yzad'];
+% nazwa1 = sprintf('wykresy_txt/char_stat_U.txt');
+% file = fopen(nazwa1, 'w');
+% C = [(1:21);ux];
 % fprintf(file, '%4.3f %.3f \n',C);
 % fclose(file);

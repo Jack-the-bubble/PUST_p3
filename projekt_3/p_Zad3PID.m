@@ -15,7 +15,7 @@ function error = p_Zad3PID(x)
     T = 0.5;
     
     %dane
-    iterNum = 1270;
+    iterNum = 800;
     Umin = -1;
     Umax = 1;
     Ypp = 0;
@@ -103,15 +103,23 @@ title(['Regulator PID K=',sprintf('%g',K'),' Ti=',sprintf('%g',Ti),' Td=',sprint
 legend('y','yzad')
 subplot(2,1,2);
 plot(U);
+
+ nazwa1 = sprintf('wykresy_txt/PID_single/U__PID_K=%g_Ti=%g_Td=%g_E=%g_.txt',K,Ti,Td,error);
+ nazwa2 = sprintf('wykresy_txt/PID_single/Y__PID_K=%g_Ti=%g_Td=%g_E=%g_.txt',K,Ti,Td,error);
+ nazwa3 = 'wykresy_txt/PID_single/Yzad_single.txt';
+
+file = fopen(nazwa1, 'w');
+A = [(1:iterNum);U'];
+fprintf(file, '%4.3f %.3f \n',A);
+fclose(file);
+
+file = fopen(nazwa2, 'w');
+B = [(1:iterNum);Y'];
+fprintf(file, '%4.3f %.3f \n',B);
+fclose(file);
+
+file = fopen(nazwa3, 'w');
+C = [(1:iterNum);(yZad+Ypp)'];
+fprintf(file, '%4.3f %.3f \n',C);
+fclose(file);
 end
-    
-% figure(1)
-% subplot(2,1,1);
-% plot(Y);
-% hold on;
-% plot(yZad+Ypp);
-% hold off;
-% title(['Regulator PID K=',sprintf('%g',K'),' Ti=',sprintf('%g',Ti),' Td=',sprintf('%g',Td)]);
-% legend('y','yzad')
-% subplot(2,1,2);
-% plot(U);

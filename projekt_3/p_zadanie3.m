@@ -5,14 +5,15 @@ global D;
 D = 61;
 
 DMC = 1;
-FUZZY = 1;
+FUZZY = 0;
 lreg = 3;
 
 
 if FUZZY == 0
     if DMC == 0
-        xPID = single_PIDfmincon([0.2000    4.0126    2.0669]);%E=104.0181
-        errorPID2 = p_Zad3PID(xPID);
+        %xPID = single_PIDfmincon([0.2000    4.0126    2.0669]);%E=104.0181
+        %errorPID2 = p_Zad3PID(xPID);
+        errorPID2 = p_Zad3PID([0.2000 4.0126 2.0669]);
         
     else
         %odp skokowa dla DMC na całej przestrzeni sterowania    
@@ -32,8 +33,8 @@ if FUZZY == 0
         st = y(2:end);
         %errorDMC = p_Zad3DMC([53 53 1]);
         %nastawy: [53 46.0000 1.0000  119.5432] E=113.6145
-        xDMC = single_DMCga();
-        errorDMC2 = p_Zad3DMC(xDMC);
+        %xDMC = single_DMCga();
+        errorDMC2 = p_Zad3DMC([46.0000 1.0000 119.5432]);
     end
     
 else

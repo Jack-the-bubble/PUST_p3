@@ -1,4 +1,4 @@
-%PUST Lab1
+ %PUST Lab1
 %Zad3b
 %Wyznaczenie modelu odpowiedzi skokowej
 
