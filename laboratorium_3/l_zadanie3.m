@@ -178,15 +178,15 @@ else
             %indeksy w macierzy funkcji przynaleznosci
             %Ukonc(k) = Ukonc(k) + U(j,k)*mf(j,100*Ukonc(k-1)+1);
             
-            if i == j
+            if j == 1
                 value = trapmf(Ukonc(k-1),[0 0 40 45]);
             end
             
-            if i == j
+            if j == 2
                 value = trapmf(Ukonc(k-1),[40 45 55 60]);
             end
             
-            if i == j
+            if j == 3
                 value = trapmf(Ukonc(k-1),[55 60 100 100]);
             end
             
@@ -208,7 +208,7 @@ else
         title(['Regulator PID K=',sprintf('%g',K'),' Ti=',sprintf('%g',Ti),' Td=',sprintf('%g',Td)]);
         legend('y','yzad')
         subplot(2,1,2);
-        stairs(U(1:k));
+        stairs(Ukonc(1:k));
         drawnow;
         
         disp('U: ' + Ukonc(k) +' Y: '+ Y(k) +' Yzad: '+ yZad(k)+Ypp);
