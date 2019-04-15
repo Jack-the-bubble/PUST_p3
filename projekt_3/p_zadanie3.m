@@ -4,8 +4,8 @@ global lreg;
 global D;
 D = 61;
 
-DMC = 1;
-FUZZY = 0;
+DMC = 0;
+FUZZY = 1;
 lreg = 3;
 
 
