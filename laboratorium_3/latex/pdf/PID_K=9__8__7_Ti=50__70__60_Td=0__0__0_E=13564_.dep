@@ -1,0 +1,3 @@
+pdf/PID_K=9__8__7_Ti=50__70__60_Td=0__0__0_E=13564_.pdf: ../wykresy_txt/PID_fuzzy/Y__PID_K=9,8,7_Ti=50,70,60_Td=0,0,0_E=13564_.txt
+pdf/PID_K=9__8__7_Ti=50__70__60_Td=0__0__0_E=13564_.pdf: ../wykresy_txt/PID_fuzzy/Yzad_fuzzy.txt
+pdf/PID_K=9__8__7_Ti=50__70__60_Td=0__0__0_E=13564_.pdf: ../wykresy_txt/PID_fuzzy/U__PID_K=9,8,7_Ti=50,70,60_Td=0,0,0_E=13564_.txt

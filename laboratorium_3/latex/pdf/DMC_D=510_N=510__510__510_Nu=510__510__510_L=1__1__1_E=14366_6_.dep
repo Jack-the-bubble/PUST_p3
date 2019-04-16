@@ -1,0 +1,3 @@
+pdf/DMC_D=510_N=510__510__510_Nu=510__510__510_L=1__1__1_E=14366_6_.pdf: ../wykresy_txt/DMC_fuzzy/Y__DMC_D=510_N=510,510,510_Nu=510,510,510_L=1,1,1_E=14366.6_.txt
+pdf/DMC_D=510_N=510__510__510_Nu=510__510__510_L=1__1__1_E=14366_6_.pdf: ../wykresy_txt/DMC_fuzzy/Yzad_fuzzy.txt
+pdf/DMC_D=510_N=510__510__510_Nu=510__510__510_L=1__1__1_E=14366_6_.pdf: ../wykresy_txt/DMC_fuzzy/U__DMC_D=510_N=510,510,510_Nu=510,510,510_L=1,1,1_E=14366.6_.txt
