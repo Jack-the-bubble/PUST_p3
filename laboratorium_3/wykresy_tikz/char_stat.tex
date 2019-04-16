@@ -1,0 +1,32 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=4.521in,
+height=3.566in,
+at={(0.758in,0.481in)},
+scale only axis,
+xmin=20,
+xmax=80,
+ymin=25,
+ymax=55,
+axis background/.style={fill=white},
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, mark=o, mark options={solid, mycolor1}]
+  table[row sep=crcr]{%
+20	28.31\\
+30	33\\
+40	37.93\\
+50	42.56\\
+60	45.25\\
+70	47.56\\
+80	50.06\\
+};
+\addlegendentry{data1}
+
+\end{axis}
+\end{tikzpicture}%

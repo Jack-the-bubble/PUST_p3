@@ -1,6 +1,6 @@
-%clear all
-
-% for i=20:20:80
+% clear all
+% 
+% for i=20:10:80
 %     name = sprintf('../dane/non_lin_pp_%g.mat', i);
 %     load(name);
 %     nazwa1 = sprintf('wykresy_txt/step_responses/Y_step_%g.txt',i);
