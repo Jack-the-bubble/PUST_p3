@@ -1,0 +1,3 @@
+pdf/projekt_3xreg.pdf: ../fun_przynal/projekt_3xreg_1.txt
+pdf/projekt_3xreg.pdf: ../fun_przynal/projekt_3xreg_2.txt
+pdf/projekt_3xreg.pdf: ../fun_przynal/projekt_3xreg_3.txt

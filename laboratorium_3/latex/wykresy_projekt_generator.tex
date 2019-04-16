@@ -175,5 +175,33 @@ file {../wykresy_txt/PID_single/U__PID_K=10_Ti=60_Td=0.25_E=14541.9_.txt};
 	\end{tikzpicture}
 \end{figure}
 
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/step_response}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 4,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=430,
+	xlabel=$k$,ylabel={$y_{20}$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../wykresy_txt/step_responses/Y_step_20.txt};
+	\nextgroupplot
+		[xmin=0, xmax=500,
+	xlabel=$k$,ylabel={$y_{40}$},legend cell align=left, legend pos=south east,]
+	\addplot[ color=red,semithick] file {../wykresy_txt/step_responses/Y_step_40.txt};
+		\nextgroupplot
+		[xmin=0, xmax=640,
+	xlabel=$k$,ylabel={$y_{60}$},legend cell align=left, legend pos=south east,]
+	\addplot[ color=green,semithick] file {../wykresy_txt/step_responses/Y_step_60.txt};
+		\nextgroupplot
+		[xmin=0, xmax=640,
+	xlabel=$k$,ylabel={$y_{80}$},legend cell align=left, legend pos=south east,]
+	\addplot[ color=kolor4,semithick] file {../wykresy_txt/step_responses/Y_step_80.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+
 
 \end{document}

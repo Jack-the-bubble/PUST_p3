@@ -1,0 +1,2 @@
+pdf/projekt_2xreg.pdf: ../fun_przynal/projekt_2xreg_1.txt
+pdf/projekt_2xreg.pdf: ../fun_przynal/projekt_2xreg_2.txt

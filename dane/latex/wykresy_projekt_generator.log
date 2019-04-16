@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.1)  16 APR 2019 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.1)  16 APR 2019 20:55
 entering extended mode
-**\def\tikzexternalrealjob{wykresy_projekt_generator}\input{wykresy_projekt_gen
-erator}
-(wykresy_projekt_generator.tex ("C:\Users\Michal\AppData\Local\Programs\MiKTeX 
-2.9\tex/latex/base\article.cls"
+**./wykresy_projekt_generator.tex
+(wykresy_projekt_generator.tex
+LaTeX2e <2018-12-01>
+("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
 ("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size11.clo"
 File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
@@ -38,6 +38,7 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 ("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics
 .sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
 ("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty
 "
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -72,6 +73,7 @@ gfutil-common-lists.tex"))
 ("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\p
 gfutil-latex.def"
 \pgfutil@abb=\box27
+
 ("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -142,8 +144,9 @@ File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
 ("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer
 \pgfsysprotocol.code.tex"
 File: pgfsysprotocol.code.tex 2019/02/02 v3.1.1 (3.1.1)
-)) ("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.
-sty"
+))
+("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty
+"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
 ("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\colo
@@ -681,8 +684,8 @@ y"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks31
 \ex@=\dimen197
-)) ("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.st
-y"
+))
+("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen198
 \ar@mcellbox=\box57
@@ -789,10 +792,12 @@ Package atveryend Info: \enddocument detected (standard20110627).
 )
 ("C:\Users\Michal\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlay
 er/tikz/libraries\tikzexternalshared.code.tex")))
-No auxiliary output files.
+\openout3 = `wykresy_projekt_generator.auxlock'.
 
-\w@pgfexternal@auxout=\write4
-No file pdf/PID_K=10_Ti=60_Td=0_25_E=14541_9_.aux.
+
+(wykresy_projekt_generator.aux)
+\openout1 = `wykresy_projekt_generator.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
@@ -948,58 +953,68 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 33.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 33.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-\openout4 = `pdf/PID_K=10_Ti=60_Td=0_25_E=14541_9_.dpth'.
+\openout3 = `wykresy_projekt_generator.auxlock'.
 
-PGFPlots: reading {../wykresy_txt/PID_single/Y__PID_K=10_Ti=60_Td=0.25_E=14541.
-9_.txt}
-\tikzexternal@dep@file=\write5
-\openout5 = `pdf/PID_K=10_Ti=60_Td=0_25_E=14541_9_.dep'.
 
-PGFPlots: reading {../wykresy_txt/PID_single/Yzad_single.txt}
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 66.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 66.
-PGFPlots: reading {../wykresy_txt/PID_single/U__PID_K=10_Ti=60_Td=0.25_E=14541.
-9_.txt}
-[1
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "pdf/lab_3xreg" "\def\tikzexternalrealj
+ob{wykresy_projekt_generator}\input{wykresy_projekt_generator}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "pdf/lab_3xreg" "\def\tikzexternalrealjob{wykresy_projekt_generator}\input{wyk
+resy_projekt_generator}")...executed.
 
-{C:/Users/Michal/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 207.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 207.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 207.
+\openout3 = `wykresy_projekt_generator.auxlock'.
+
+\openout3 = `wykresy_projekt_generator.auxlock'.
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "pdf/projekt_3xreg" "\def\tikzexternalr
+ealjob{wykresy_projekt_generator}\input{wykresy_projekt_generator}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "pdf/projekt_3xreg" "\def\tikzexternalrealjob{wykresy_projekt_generator}\input
+{wykresy_projekt_generator}")...executed.
+
+\openout3 = `wykresy_projekt_generator.auxlock'.
+
+\openout3 = `wykresy_projekt_generator.auxlock'.
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "pdf/projekt_2xreg" "\def\tikzexternalr
+ealjob{wykresy_projekt_generator}\input{wykresy_projekt_generator}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "pdf/projekt_2xreg" "\def\tikzexternalrealjob{wykresy_projekt_generator}\input
+{wykresy_projekt_generator}")...executed.
+
+\openout3 = `wykresy_projekt_generator.auxlock'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
+[1{C:/Users/Michal/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./pdf/la
+b_3xreg.pdf> <./pdf/projekt_3xreg.pdf> <./pdf/projekt_2xreg.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
+
+(wykresy_projekt_generator.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 89.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 89.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 89.
  ) 
 Here is how much of TeX's memory you used:
- 34363 strings out of 492946
- 863131 string characters out of 3125823
- 1549101 words of memory out of 3000000
- 37838 multiletter control sequences out of 15000+200000
- 538640 words of font info for 47 fonts, out of 3000000 for 9000
+ 33884 strings out of 492946
+ 849429 string characters out of 3125823
+ 925023 words of memory out of 3000000
+ 37360 multiletter control sequences out of 15000+200000
+ 536486 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,21n,96p,797b,2466s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,5n,96p,744b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmmi9.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb>
-Output written on pdf/PID_K=10_Ti=60_Td=0_25_E=14541_9_.pdf (1 page, 52430 byte
-s).
+s/cm/cmmi6.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi9.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Michal/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Michal/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Mich
+al/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+Output written on wykresy_projekt_generator.pdf (1 page, 188012 bytes).
 PDF statistics:
- 17 PDF objects out of 1000 (max. 8388607)
+ 76 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

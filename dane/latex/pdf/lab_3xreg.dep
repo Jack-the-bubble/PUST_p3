@@ -1,0 +1,3 @@
+pdf/lab_3xreg.pdf: ../fun_przynal/lab_3xreg_1.txt
+pdf/lab_3xreg.pdf: ../fun_przynal/lab_3xreg_2.txt
+pdf/lab_3xreg.pdf: ../fun_przynal/lab_3xreg_3.txt

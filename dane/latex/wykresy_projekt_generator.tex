@@ -1,0 +1,89 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\sisetup{detect-weight,exponent-product=\cdot,output-decimal-marker={,},
+	per-mode=symbol,binary-units=true,range-phrase={-},range-units=single}
+\SendSettingsToPgf
+\usetikzlibrary{pgfplots.groupplots}
+\pgfplotsset{compat=1.10}
+\usepgfplotslibrary{external}
+\tikzexternalize
+
+\textwidth 160mm \textheight 247mm
+
+\pgfplotsset{width=\figurewidth,compat=1.10}
+\pgfplotsset{width=\figurewidth}
+\pgfplotsset{
+	tick label style={font=\tiny},
+	label style={font=\footnotesize},
+	legend style={font=\footnotesize},
+	title style={font=\footnotesize},
+}
+
+
+\newcommand{\szer}{16cm}
+\newcommand{\wys}{5.6cm}
+\newcommand{\size}{12cm}
+\newcommand{\odstepionowy}{1.2cm}
+
+\definecolor{kolor4}{rgb}{0,0,0.1724}
+\definecolor{kolor5}{rgb}{1.0000,0.1034,0.7241}
+\definecolor{kolor6}{rgb}{1.0000,0.8276,0}
+
+\begin{document}
+	
+	
+
+	
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+\centering
+\tikzsetnextfilename{pdf/lab_3xreg}
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+width=\size,height=\wys]
+\nextgroupplot
+[xmin=0, xmax=100,
+xlabel=$U$,ylabel={$F(U)$},legend cell align=left, legend pos=south east,]
+\addplot[color=blue,semithick] file {../fun_przynal/lab_3xreg_1.txt};
+\addplot[color=red,semithick] file {../fun_przynal/lab_3xreg_2.txt};
+\addplot[color=kolor4,semithick] file {../fun_przynal/lab_3xreg_3.txt};
+\end{groupplot}
+\end{tikzpicture}
+\end{figure}
+
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/projekt_3xreg}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\size,height=\wys]
+	\nextgroupplot
+	[xmin=-1, xmax=1,
+	xlabel=$U$,ylabel={$F(U)$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../fun_przynal/projekt_3xreg_1.txt};
+	\addplot[color=red,semithick] file {../fun_przynal/projekt_3xreg_2.txt};
+	\addplot[color=kolor4,semithick] file {../fun_przynal/projekt_3xreg_3.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/projekt_2xreg}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 2,vertical sep=\odstepionowy},
+	width=\size,height=\wys]
+	\nextgroupplot
+	[xmin=-1, xmax=1,
+	xlabel=$U$,ylabel={$F(U)$},legend cell align=left, legend pos=south east,]
+	\addplot[color=blue,semithick] file {../fun_przynal/projekt_2xreg_1.txt};
+	\addplot[color=red,semithick] file {../fun_przynal/projekt_2xreg_2.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\end{document}
