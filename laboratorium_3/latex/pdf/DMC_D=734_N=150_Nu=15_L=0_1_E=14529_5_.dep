@@ -1,0 +1,3 @@
+pdf/DMC_D=734_N=150_Nu=15_L=0_1_E=14529_5_.pdf: ../wykresy_txt/DMC_single/Y__DMC_D=734_N=150_Nu=15_L=0.1_E=14529.5_.txt
+pdf/DMC_D=734_N=150_Nu=15_L=0_1_E=14529_5_.pdf: ../wykresy_txt/DMC_single/Yzad_single.txt
+pdf/DMC_D=734_N=150_Nu=15_L=0_1_E=14529_5_.pdf: ../wykresy_txt/DMC_single/U__DMC_D=734_N=150_Nu=15_L=0.1_E=14529.5_.txt
