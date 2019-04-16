@@ -1,21 +1,20 @@
 %clear all
 
-% for i=20:20:80
-%     name = sprintf('../dane/non_lin_pp_%g.mat', i);
-%     load(name);
-%     nazwa1 = sprintf('wykresy_txt/step_responses/Y_step_%g.txt',i);
-%     nazwa2 = sprintf('wykresy_txt/step_responses/U_step_%g.txt',i);
-% 
-%     file = fopen(nazwa1, 'w');
-%     A = [(1:length(step_response));step_response];
-%     fprintf(file, '%4.3f %.3f \n',A);
-%     fclose(file);
-% 
-%     file = fopen(nazwa2, 'w');
-%     B = [(1:length(step_response));ones(length(step_response),1)'*i];
-%     fprintf(file, '%4.3f %.3f \n',B);
-%     fclose(file);
-% end
+for i=20:20:80
+name = sprintf('../dane/non_lin_pp_%g.mat', i);
+load(name);
+nazwa1 = sprintf('wykresy_txt/step_responses/Y_step_%g.txt',i);
+nazwa2 = sprintf('wykresy_txt/step_responses/U_step_%g.txt',i);
+
+ file = fopen(nazwa1, 'w');
+ A = [(1:);U'];
+ fprintf(file, '%4.3f %.3f \n',A);
+ fclose(file);
+
+ file = fopen(nazwa2, 'w');
+ B = [(1:iterNum);Y'];
+ fprintf(file, '%4.3f %.3f \n',B);
+ fclose(file);
 
 
 
