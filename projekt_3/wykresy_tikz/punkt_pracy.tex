@@ -23,8 +23,7 @@ ylabel={y(k)},
 axis background/.style={fill=white},
 legend style={legend cell align=left, align=left, draw=white!15!black}
 ]
-\addplot [color=mycolor1]
-  table[row sep=crcr]{%
+\addplot[const plot, color=mycolor1] table[row sep=crcr] {%
 1	0\\
 2	0\\
 3	0\\
@@ -57,9 +56,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 30	0\\
 };
 
-
-\addplot [color=mycolor2]
-  table[row sep=crcr]{%
+\addplot[const plot, color=mycolor2] table[row sep=crcr] {%
 1	1\\
 2	1\\
 3	1\\
@@ -92,9 +89,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 30	2.40019936316136e-05\\
 };
 
-
-\addplot [color=mycolor3]
-  table[row sep=crcr]{%
+\addplot[const plot, color=mycolor3] table[row sep=crcr] {%
 1	2\\
 2	2\\
 3	2\\
@@ -127,9 +122,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 30	4.80039872632273e-05\\
 };
 
-
-\addplot [color=mycolor4]
-  table[row sep=crcr]{%
+\addplot[const plot, color=mycolor4] table[row sep=crcr] {%
 1	3\\
 2	3\\
 3	3\\
@@ -161,7 +154,6 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 29	0.000105490593825154\\
 30	7.20059808948409e-05\\
 };
-
 
 \end{axis}
 \end{tikzpicture}%

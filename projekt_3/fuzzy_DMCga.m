@@ -18,8 +18,18 @@
     %ograniczenia nierownosciowe
     ADMC_part = [1 0 0; -1 1 0; 0 0 1; -1 0 0; 0 -1 0; 0 0 -1];
     ADMC_zeros = zeros(6,3);
+    
+    if(lreg == 3)    
+        ADMC = [ADMC_part ADMC_zeros ADMC_zeros];  
+        IntCon = [1 2 4 5 7 8];
+    end
+    
+     if(lreg == 2)
+        ADMC = [ADMC_part ADMC_zeros]; 
+        IntCon = [1 2 4 5];
+     end
         
-    ADMC = [ADMC_part ADMC_zeros ADMC_zeros];
+    
     ADMC_row = ADMC; 
     
     bDMC_part = [Nmax; 0; lambdamax; -Nmin; -Numin; -lambdamin];
@@ -35,8 +45,8 @@
     %dodatkowe opcje
     %optionsPID = optimoptions(@ga, 'Display', 'iter', 'MaxGenerations', 30);
     optionsDMC = optimoptions(@ga, 'Display', 'none', 'MaxGenerations', 30);
-    IntCon = [1 2 4 5 7 8];
-    xDMC = ga(@p_Zad5DMCRozm, 9, ADMC, bDMC, [], [], [], [], [], IntCon, optionsDMC);
+ 
+    xDMC = ga(@p_Zad5DMCRozm, lreg*3, ADMC, bDMC, [], [], [], [], [], IntCon, optionsDMC);
 end
 
 

@@ -18,11 +18,18 @@
 
     
     %ograniczenia nierownosciowe
-    APID_part = [1 0 0; 0 1 0; 0 0 1; -1 0 0; 0 -1 0; 0 0 -1];
     APID_zeros = zeros(6,3);
-        
-    APID = [APID_part APID_zeros APID_zeros];
-    APID_row = APID; 
+    APID_part = [1 0 0; 0 1 0; 0 0 1; -1 0 0; 0 -1 0; 0 0 -1];
+    
+    if(lreg == 3)    
+        APID = [APID_part APID_zeros APID_zeros];   
+    end
+    
+     if(lreg == 2)
+        APID = [APID_part APID_zeros]; 
+     end
+     
+    APID_row = APID;
     
     bPID_part = [Kmax; Timax; Tdmax; -Kmin; -Timin; -Tdmin];
     bPID = bPID_part;

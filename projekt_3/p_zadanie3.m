@@ -4,9 +4,9 @@ global lreg;
 global D;
 D = 61;
 
-DMC = 0;
+DMC = 1;
 FUZZY = 1;
-lreg = 3;
+lreg = 2;
 
 
 if FUZZY == 0
@@ -40,21 +40,21 @@ if FUZZY == 0
 else
     if DMC == 0
         if lreg == 2
-            %xPID = fuzzy_PIDfmincon([0.5 100 0 0.2 40 0 0.5 100 0]);
+            %xPID = fuzzy_PIDfmincon([0.4488 122.0959 1.1900 0.0892 3.3326 0.4033]);
             errorFPID = p_Zad5PIDRozm([0.4488  122.0959    1.1900    0.0892 3.3326    0.4033]);%błąd 93.5929 dla lreq=2
         end
         
         if lreg == 3
             %xPID = fuzzy_PIDfmincon([1.9083   93.9994    0.7405    0.3995 31.5524    0.0462    1.4088   77.6580 0.1715]);
-            errorFPID2 =p_Zad5PIDRozm([1.9083   93.9994    0.7405    0.3995 31.5524    0.0462    1.4088   77.6580 0.1715]);%błąd 361.7114 dla lreq=3
+            errorFPID2 =p_Zad5PIDRozm([4.3301   94.0455    0.6022    0.3664 29.5223    0.0372    1.5132   79.0692 0.1643]);%błąd 344.8967 dla lreq=3
         end
 
         
     else
         if lreg == 2
             st = p_odpskokFDMC();
-            %xDMC = fuzzy_DMCga();
-            errorFDMC = p_Zad5DMCRozm([61 61 100 61 61 100]);%błąd 158.9567
+            xDMC = fuzzy_DMCga();
+            %errorFDMC = p_Zad5DMCRozm([61 61 100 61 61 100]);%błąd 158.9567
         end
         
         if lreg==3

@@ -14,7 +14,7 @@ for i = 0:3
 end
 
 figure(1)
-plot(y');
+stairs(y');
 xlabel('k');
 ylabel('y(k)');
 hold on;

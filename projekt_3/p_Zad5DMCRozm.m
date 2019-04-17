@@ -184,4 +184,30 @@ function error = p_Zad5DMCRozm(x)
     legend('y','yzad')
     subplot(2,1,2);
     plot(Ukonc);
+    
+%         if lreg == 3
+%         nazwa1 = sprintf('wykresy_txt/DMC_fuzzy/U__DMC_K=%g,%g,%g_Ti=%g,%g,%g_Td=%g,%g,%g_E=%g_.txt',K,Ti,Td,error);
+%         nazwa2 = sprintf('wykresy_txt/DMC_fuzzy/Y__PID_K=%g,%g,%g_Ti=%g,%g,%g_Td=%g,%g,%g_E=%g_.txt',K,Ti,Td,error);
+%     end
+%     
+%     if lreg == 2
+%         nazwa1 = sprintf('wykresy_txt/PID_fuzzy/U__PID_K=%g,%g_Ti=%g,%g_Td=%g,%g_E=%g_.txt',K,Ti,Td,error);
+%         nazwa2 = sprintf('wykresy_txt/PID_fuzzy/Y__PID_K=%g,%g_Ti=%g,%g_Td=%g,%g_E=%g_.txt',K,Ti,Td,error);
+%     end
+%         nazwa3 = 'wykresy_txt/PID_fuzzy/Yzad_single.txt';
+% 
+%  file = fopen(nazwa1, 'w');
+%  A = [(1:iterNum);Ukonc'];
+%  fprintf(file, '%4.3f %.3f \n',A);
+%  fclose(file);
+% 
+%  file = fopen(nazwa2, 'w');
+%  B = [(1:iterNum);Y'];
+%  fprintf(file, '%4.3f %.3f \n',B);
+%  fclose(file);
+% 
+%  file = fopen(nazwa3, 'w');
+%  C = [(1:iterNum);(yZad+Ypp)'];
+%  fprintf(file, '%4.3f %.3f \n',C);
+%  fclose(file);
     end

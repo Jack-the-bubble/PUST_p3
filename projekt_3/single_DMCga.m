@@ -21,7 +21,7 @@ function xDMC = single_DMCga()
     x0DMC = [60; 30; 5];
 
     %dodatkowe opcje
-    optionsDMC = optimoptions(@ga, 'Display', 'iter', 'MaxGenerations', 30);
+    optionsDMC = optimoptions(@ga, 'Display', 'iter', 'MaxGenerations', 100);
 
     %N i Nu ca�kowite:
     IntCon = [1 2];
