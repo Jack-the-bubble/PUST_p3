@@ -5,8 +5,8 @@ global D;
 D = 61;
 
 DMC = 1;
-FUZZY = 1;
-lreg = 2;
+FUZZY = 0;
+lreg = 3;
 
 
 if FUZZY == 0
@@ -53,8 +53,8 @@ else
     else
         if lreg == 2
             st = p_odpskokFDMC();
-            xDMC = fuzzy_DMCga();
-            %errorFDMC = p_Zad5DMCRozm([61 61 100 61 61 100]);%błąd 158.9567
+           % xDMC = fuzzy_DMCga();
+            errorFDMC = p_Zad5DMCRozm([61 61 100 61 61 100]);%błąd 158.9567
         end
         
         if lreg==3
