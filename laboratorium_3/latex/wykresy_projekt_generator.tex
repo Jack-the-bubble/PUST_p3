@@ -63,7 +63,7 @@ xlabel=$k$,ylabel={$y^{\mathrm{zad}}, \ y$},legend cell align=left, legend pos=s
 \addplot[const plot, color=red,semithick,densely dashed] file {../wykresy_txt/PID_single/Yzad_single.txt};
 \legend{$y$,$y^{\mathrm{zad}}$}
 \nextgroupplot
-[xmin=0,xmax=800, xlabel=$k$,ylabel=$u$]
+[xmin=0,xmax=1400, xlabel=$k$,ylabel=$u$]
 \addplot[const plot, color=blue,semithick]
 file {../wykresy_txt/PID_single/U__PID_K=10_Ti=60_Td=0.25_E=14541.9_.txt};
 \end{groupplot}
@@ -84,7 +84,7 @@ file {../wykresy_txt/PID_single/U__PID_K=10_Ti=60_Td=0.25_E=14541.9_.txt};
 	\addplot[const plot, color=red,semithick,densely dashed] file {../wykresy_txt/DMC_single/Yzad_single.txt};
 	\legend{$y$,$y^{\mathrm{zad}}$}
 	\nextgroupplot
-	[xmin=0,xmax=800, xlabel=$k$,ylabel=$u$]
+	[xmin=0,xmax=1400, xlabel=$k$,ylabel=$u$]
 	\addplot[const plot, color=blue,semithick]
 	file {../wykresy_txt/DMC_single/U__DMC_D=734_N=150_Nu=15_L=0.1_E=14529.5_.txt};
 	\end{groupplot}
@@ -105,7 +105,7 @@ file {../wykresy_txt/PID_single/U__PID_K=10_Ti=60_Td=0.25_E=14541.9_.txt};
 	\addplot[const plot, color=red,semithick,densely dashed] file {../wykresy_txt/PID_fuzzy/Yzad_fuzzy.txt};
 	\legend{$y$,$y^{\mathrm{zad}}$}
 	\nextgroupplot
-	[xmin=0,xmax=800, xlabel=$k$,ylabel=$u$]
+	[xmin=0,xmax=1400, xlabel=$k$,ylabel=$u$]
 	\addplot[const plot, color=blue,semithick]
 	file {../wykresy_txt/PID_fuzzy/U__PID_K=8,8,7_Ti=60,50,40_Td=0,0,0_E=14486.5_.txt};
 	\end{groupplot}
@@ -126,7 +126,7 @@ file {../wykresy_txt/PID_single/U__PID_K=10_Ti=60_Td=0.25_E=14541.9_.txt};
 	\addplot[const plot, color=red,semithick,densely dashed] file {../wykresy_txt/PID_fuzzy/Yzad_fuzzy.txt};
 	\legend{$y$,$y^{\mathrm{zad}}$}
 	\nextgroupplot
-	[xmin=0,xmax=800, xlabel=$k$,ylabel=$u$]
+	[xmin=0,xmax=1400, xlabel=$k$,ylabel=$u$]
 	\addplot[const plot, color=blue,semithick]
 	file {../wykresy_txt/PID_fuzzy/U__PID_K=9,8,7_Ti=50,70,60_Td=0,0,0_E=13564_.txt};
 	\end{groupplot}
@@ -147,7 +147,7 @@ file {../wykresy_txt/PID_single/U__PID_K=10_Ti=60_Td=0.25_E=14541.9_.txt};
 	\addplot[const plot, color=red,semithick,densely dashed] file {../wykresy_txt/DMC_fuzzy/Yzad_fuzzy.txt};
 	\legend{$y$,$y^{\mathrm{zad}}$}
 	\nextgroupplot
-	[xmin=0,xmax=800, xlabel=$k$,ylabel=$u$]
+	[xmin=0,xmax=1400, xlabel=$k$,ylabel=$u$]
 	\addplot[const plot, color=blue,semithick]
 	file {../wykresy_txt/DMC_fuzzy/U__DMC_D=510_N=510,510,510_Nu=510,510,510_L=1,1,1_E=14366.6_.txt};
 	\end{groupplot}
@@ -168,7 +168,7 @@ file {../wykresy_txt/PID_single/U__PID_K=10_Ti=60_Td=0.25_E=14541.9_.txt};
 	\addplot[const plot, color=red,semithick,densely dashed] file {../wykresy_txt/DMC_fuzzy/Yzad_fuzzy.txt};
 	\legend{$y$,$y^{\mathrm{zad}}$}
 	\nextgroupplot
-	[xmin=0,xmax=800, xlabel=$k$,ylabel=$u$]
+	[xmin=0,xmax=1400, xlabel=$k$,ylabel=$u$]
 	\addplot[const plot, color=blue,semithick]
 	file {../wykresy_txt/DMC_fuzzy/U__DMC_D=510_N=510,510,510_Nu=510,510,510_L=1,10,8_E=15382.8_.txt};
 	\end{groupplot}
@@ -187,17 +187,40 @@ file {../wykresy_txt/PID_single/U__PID_K=10_Ti=60_Td=0.25_E=14541.9_.txt};
 	xlabel=$k$,ylabel={$y_{20}$},legend cell align=left, legend pos=south east,]
 	\addplot[color=blue,semithick] file {../wykresy_txt/step_responses/Y_step_20.txt};
 	\nextgroupplot
+		[xmin=0, xmax=430,
+	xlabel=$k$,ylabel={$y_{30}$},legend cell align=left, legend pos=south east,]
+	\addplot[ color=red,semithick] file {../wykresy_txt/step_responses/Y_step_30.txt};
+		\nextgroupplot
 		[xmin=0, xmax=500,
 	xlabel=$k$,ylabel={$y_{40}$},legend cell align=left, legend pos=south east,]
-	\addplot[ color=red,semithick] file {../wykresy_txt/step_responses/Y_step_40.txt};
+	\addplot[ color=green,semithick] file {../wykresy_txt/step_responses/Y_step_40.txt};
 		\nextgroupplot
-		[xmin=0, xmax=640,
+		[xmin=0, xmax=500,
+	xlabel=$k$,ylabel={$y_{50}$},legend cell align=left, legend pos=south east,]
+	\addplot[ color=kolor4,semithick] file {../wykresy_txt/step_responses/Y_step_50.txt};
+	\end{groupplot}
+	\end{tikzpicture}
+\end{figure}
+
+\tikzsetnextfilename{}
+\begin{figure}[tb]
+	\centering
+	\tikzsetnextfilename{pdf/step_response1}
+	\begin{tikzpicture}
+	\begin{groupplot}[group style={group size=1 by 4,vertical sep=\odstepionowy},
+	width=\szer,height=\wys]
+	\nextgroupplot
+	[xmin=0, xmax=640,
 	xlabel=$k$,ylabel={$y_{60}$},legend cell align=left, legend pos=south east,]
-	\addplot[ color=green,semithick] file {../wykresy_txt/step_responses/Y_step_60.txt};
-		\nextgroupplot
-		[xmin=0, xmax=640,
+	\addplot[color=orange,semithick] file {../wykresy_txt/step_responses/Y_step_60.txt};
+	\nextgroupplot
+	[xmin=0, xmax=640,
+	xlabel=$k$,ylabel={$y_{70}$},legend cell align=left, legend pos=south east,]
+	\addplot[ color=kolor5,semithick] file {../wykresy_txt/step_responses/Y_step_70.txt};
+	\nextgroupplot
+	[xmin=0, xmax=640,
 	xlabel=$k$,ylabel={$y_{80}$},legend cell align=left, legend pos=south east,]
-	\addplot[ color=kolor4,semithick] file {../wykresy_txt/step_responses/Y_step_80.txt};
+	\addplot[ color=kolor6,semithick] file {../wykresy_txt/step_responses/Y_step_80.txt};
 	\end{groupplot}
 	\end{tikzpicture}
 \end{figure}

@@ -792,7 +792,7 @@ er/tikz/libraries\tikzexternalshared.code.tex")))
 No auxiliary output files.
 
 \w@pgfexternal@auxout=\write4
-No file pdf/DMC_D=734_N=150_Nu=15_L=0_1_E=14529_5_.aux.
+No file pdf/step_response1.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
@@ -952,35 +952,33 @@ A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
-\openout4 = `pdf/DMC_D=734_N=150_Nu=15_L=0_1_E=14529_5_.dpth'.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+\openout4 = `pdf/step_response1.dpth'.
 
-PGFPlots: reading {../wykresy_txt/DMC_single/Y__DMC_D=734_N=150_Nu=15_L=0.1_E=1
-4529.5_.txt}
+PGFPlots: reading {../wykresy_txt/step_responses/Y_step_60.txt}
 \tikzexternal@dep@file=\write5
-\openout5 = `pdf/DMC_D=734_N=150_Nu=15_L=0_1_E=14529_5_.dep'.
+\openout5 = `pdf/step_response1.dep'.
 
-PGFPlots: reading {../wykresy_txt/DMC_single/Yzad_single.txt}
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 87.
+(Font)              <5> on input line 218.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 87.
-PGFPlots: reading {../wykresy_txt/DMC_single/U__DMC_D=734_N=150_Nu=15_L=0.1_E=1
-4529.5_.txt}
+(Font)              <9> on input line 218.
+PGFPlots: reading {../wykresy_txt/step_responses/Y_step_70.txt}
+PGFPlots: reading {../wykresy_txt/step_responses/Y_step_80.txt}
 [1
 
 {C:/Users/Michal/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
-A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
-isable this.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 230.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 230.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 230.
@@ -988,18 +986,17 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 230.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 230.
  ) 
 Here is how much of TeX's memory you used:
- 34363 strings out of 492946
- 863162 string characters out of 3125823
- 1547692 words of memory out of 3000000
- 37838 multiletter control sequences out of 15000+200000
+ 34361 strings out of 492946
+ 863024 string characters out of 3125823
+ 1130505 words of memory out of 3000000
+ 37836 multiletter control sequences out of 15000+200000
  538640 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,21n,96p,797b,2466s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,13n,96p,797b,2282s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmmi9.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmr6.pfb>
-Output written on pdf/DMC_D=734_N=150_Nu=15_L=0_1_E=14529_5_.pdf (1 page, 52082
- bytes).
+Output written on pdf/step_response1.pdf (1 page, 30390 bytes).
 PDF statistics:
  17 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

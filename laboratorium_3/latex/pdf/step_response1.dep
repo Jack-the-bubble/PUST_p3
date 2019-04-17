@@ -1,0 +1,3 @@
+pdf/step_response1.pdf: ../wykresy_txt/step_responses/Y_step_60.txt
+pdf/step_response1.pdf: ../wykresy_txt/step_responses/Y_step_70.txt
+pdf/step_response1.pdf: ../wykresy_txt/step_responses/Y_step_80.txt

@@ -1,4 +1,4 @@
 pdf/step_response.pdf: ../wykresy_txt/step_responses/Y_step_20.txt
+pdf/step_response.pdf: ../wykresy_txt/step_responses/Y_step_30.txt
 pdf/step_response.pdf: ../wykresy_txt/step_responses/Y_step_40.txt
-pdf/step_response.pdf: ../wykresy_txt/step_responses/Y_step_60.txt
-pdf/step_response.pdf: ../wykresy_txt/step_responses/Y_step_80.txt
+pdf/step_response.pdf: ../wykresy_txt/step_responses/Y_step_50.txt

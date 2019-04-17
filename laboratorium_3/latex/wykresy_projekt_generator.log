@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.1)  16 APR 2019 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.3.1)  17 APR 2019 13:04
 entering extended mode
 **./wykresy_projekt_generator.tex
 (wykresy_projekt_generator.tex
@@ -953,8 +953,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 33.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 33.
-\openout3 = `pdf/char_stat.md5'.
-
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
 
@@ -966,8 +964,6 @@ runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
 resy_projekt_generator}")...executed.
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
-
-\openout3 = `pdf/PID_K=10_Ti=60_Td=0_25_E=14541_9_.md5'.
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
@@ -981,8 +977,6 @@ ekt_generator}\input{wykresy_projekt_generator}")...executed.
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
-\openout3 = `pdf/DMC_D=734_N=150_Nu=15_L=0_1_E=14529_5_.md5'.
-
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
@@ -994,8 +988,6 @@ runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
 _projekt_generator}\input{wykresy_projekt_generator}")...executed.
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
-
-\openout3 = `pdf/PID_K=8__8__7_Ti=60__50__40_Td=0__0__0_E=14486_5_.md5'.
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
@@ -1009,8 +1001,6 @@ job{wykresy_projekt_generator}\input{wykresy_projekt_generator}")...executed.
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
-\openout3 = `pdf/PID_K=9__8__7_Ti=50__70__60_Td=0__0__0_E=13564_.md5'.
-
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
@@ -1022,9 +1012,6 @@ runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
 b{wykresy_projekt_generator}\input{wykresy_projekt_generator}")...executed.
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
-
-\openout3 = `pdf/DMC_D=510_N=510__510__510_Nu=510__510__510_L=1__1__1_E=14366_6
-_.md5'.
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
@@ -1039,9 +1026,6 @@ kzexternalrealjob{wykresy_projekt_generator}\input{wykresy_projekt_generator}")
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
-\openout3 = `pdf/DMC_D=510_N=510__510__510_Nu=510__510__510_L=1__10__8_E=15382_
-8_.md5'.
-
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
@@ -1055,8 +1039,6 @@ ikzexternalrealjob{wykresy_projekt_generator}\input{wykresy_projekt_generator}"
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
-\openout3 = `pdf/step_response.md5'.
-
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
 ===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
@@ -1068,23 +1050,35 @@ runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
 
 \openout3 = `wykresy_projekt_generator.auxlock'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
+\openout3 = `wykresy_projekt_generator.auxlock'.
+
+===== 'mode=convert with system call': Invoking 'pdflatex -shell-escape -halt-o
+n-error -interaction=batchmode -jobname "pdf/step_response1" "\def\tikzexternal
+realjob{wykresy_projekt_generator}\input{wykresy_projekt_generator}"' ========
+runsystem(pdflatex -shell-escape -halt-on-error -interaction=batchmode -jobname
+ "pdf/step_response1" "\def\tikzexternalrealjob{wykresy_projekt_generator}\inpu
+t{wykresy_projekt_generator}")...executed.
+
+\openout3 = `wykresy_projekt_generator.auxlock'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 230.
 [1{C:/Users/Michal/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./pdf/ch
 ar_stat.pdf> <./pdf/PID_K=10_Ti=60_Td=0_25_E=14541_9_.pdf>] [2 <./pdf/DMC_D=734
 _N=150_Nu=15_L=0_1_E=14529_5_.pdf> <./pdf/PID_K=8__8__7_Ti=60__50__40_Td=0__0__
 0_E=14486_5_.pdf>] [3 <./pdf/PID_K=9__8__7_Ti=50__70__60_Td=0__0__0_E=13564_.pd
 f> <./pdf/DMC_D=510_N=510__510__510_Nu=510__510__510_L=1__1__1_E=14366_6_.pdf>]
 [4 <./pdf/DMC_D=510_N=510__510__510_Nu=510__510__510_L=1__10__8_E=15382_8_.pdf>
-] [5 <./pdf/step_response.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
- (wykresy_projekt_generator.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 207.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 207.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 207.
+] [5 <./pdf/step_response.pdf>] [6 <./pdf/step_response1.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 230.
+
+(wykresy_projekt_generator.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 230.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 230.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 230.
  ) 
 Here is how much of TeX's memory you used:
- 33886 strings out of 492946
- 849737 string characters out of 3125823
+ 33890 strings out of 492946
+ 849764 string characters out of 3125823
  926022 words of memory out of 3000000
  37360 multiletter control sequences out of 15000+200000
  536486 words of font info for 39 fonts, out of 3000000 for 9000
@@ -1095,9 +1089,9 @@ s/cm/cmmi9.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmr10.pfb><C:/Users/Michal/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Michal/AppData/Local/Programs
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on wykresy_projekt_generator.pdf (5 pages, 336353 bytes).
+Output written on wykresy_projekt_generator.pdf (6 pages, 344621 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
+ 112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
